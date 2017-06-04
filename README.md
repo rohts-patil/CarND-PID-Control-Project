@@ -2,6 +2,24 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+# Reflection
+
+## Effect each of the P, I, D components
+
+PID controller has three types of gain defined as follows:
+   <br> Kp - Proportional gain (applied to the current error)
+   <br> Ki - Integral gain (applied to the sum of all errors)
+   <br> Kd - Differential gain (applied to the difference between current error and previous one)
+
+In this project I observed that the Integral `I` component has very small (negligible) effect on the controller.
+
+The proportional `P` component  is responsible for navigating the  vehicle towards the goal but the differential parameter `D` plays the most important role by counteracting the effect of overshooting.
+
+
+
+## Tuning hyper-parameters
+
+The final hyper-parameters (`P`,` I`,` D` ) were obtained by manual tuning. I started with the Sebastian's parameters and then tuned them manually.
 
 ## Dependencies
 
@@ -19,7 +37,7 @@ Self-Driving Car Engineer Nanodegree Program
   * Run either `./install-mac.sh` or `./install-ubuntu.sh`.
   * If you install from source, checkout to commit `e94b6e1`, i.e.
     ```
-    git clone https://github.com/uWebSockets/uWebSockets 
+    git clone https://github.com/uWebSockets/uWebSockets
     cd uWebSockets
     git checkout e94b6e1
     ```
@@ -31,7 +49,7 @@ Self-Driving Car Engineer Nanodegree Program
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
+4. Run it: `./pid`.
 
 ## Editor Settings
 
